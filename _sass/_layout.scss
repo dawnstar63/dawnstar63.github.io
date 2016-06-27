@@ -3,20 +3,33 @@
  */
 .site-header {
     border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    // border-bottom: 1px solid $grey-color;
     min-height: 56px;
+    height: auto;
+    padding-top: 10px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+    .wrapper {
+        background-color: rgba(255,255,255,0.5);
+
+    }
+
+    .site-title:hover {
+        text-decoration: none;
+        color: $grey-color;
+
+
+    }
+    
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: $site-title-font-size;
     font-weight: 300;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
+    line-height: 2;
+    display: inline-block;
 
     &,
     &:visited {
@@ -24,81 +37,63 @@
     }
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
 
+
+
+.site-nav {
+    position: relative;
+    // float: left;
+    // margin-top: auto;
+    display: inline;
+    
     .menu-icon {
         display: none;
     }
 
     .page-link {
+        margin-left: 50px;
+        font-size: 20px;
         color: $text-color;
         line-height: $base-line-height;
+        display: inline;
 
+        border-bottom: 4px solid rgba(0,0,0,0);
+        padding: 20px 0;
+
+        &.current {
+            text-decoration: none;
+            border-bottom: 4px solid $grey-color;
+            padding: 6px 0; 
+            color: $grey-color;
+        }
+
+
+        &:hover {
+            transition: 0.3s ease;
+            text-decoration: none;
+            border-bottom: 4px solid $grey-color;
+            padding: 6px 0; 
+            color: $grey-color;
+        }
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-            margin-right: 20px;
+            // margin-right: 20px;
         }
     }
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
 }
 
+
+.home {
+    
+}
 
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    // border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
 }
 
@@ -169,6 +164,11 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+
+    .wrapper {
+        padding-top: $spacing-unit;
+        background-color: rgba(255,255,255,0.5);
+    }
 }
 
 .page-heading {
@@ -204,12 +204,12 @@
 }
 
 .post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
+    font-size: 36px;
+    letter-spacing: 0px;
     line-height: 1;
 
     @include media-query($on-laptop) {
-        font-size: 36px;
+        font-size: 30px;
     }
 }
 
@@ -220,7 +220,7 @@
         font-size: 32px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 26px;
         }
     }
 
@@ -235,8 +235,26 @@
     h4 {
         font-size: 20px;
 
+        &.with-description {
+            margin-bottom: 0;
+        }
+
         @include media-query($on-laptop) {
             font-size: 18px;
         }
     }
+
+    h5 {
+        font-size: 16px;
+        text-indent: 25px;
+
+        @include media-query($on-laptop) {
+            font-size: 14px;
+        }
+    }
+}
+
+
+img {
+    padding: 0px 30px 30px 0px;
 }

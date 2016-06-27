@@ -1,26 +1,14 @@
 ---
 layout: default
 ---
+<article class="post">
 
-<div class="home">
+  <div class="post-content">
+    <p>Hi there! Welcome to my website!</p>
 
-  <h3>Hello! My name is Elena.</h3>
-  <h6>Not really.</h6>
+    <p>A bit about myself: I'm a cellist and coder currently studying at the Columbia-Juilliard Exchange program. I grew up in the San Francisco Bay Area, and was a student at the San Francisco Conservatory of Music Pre-College Division and a member of the San Francisco Symphony Youth Orchestra until 2016.</p>
 
-  <h1 class="page-heading">Posts</h1>
+    <p>Some pages are still under construction, but feel free to browse around!</p>
+  </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+</article>
