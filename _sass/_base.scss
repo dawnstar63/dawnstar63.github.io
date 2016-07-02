@@ -24,11 +24,13 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
 
-    background-image: url("../img/golden gate bridge 20.png");
+    background-image: url("../img/elena ariza photo golden gate bridge filter lighter.jpg");
     background-repeat: no-repeat; 
-    background-position: center center;
+    background-position: 65% center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
+
+    background-color: rgba(237, 236, 232, 1);
 
     height: 100%;
     overflow: auto;
@@ -180,7 +182,7 @@ pre {
         padding-top: $spacing-unit;
     }
 
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
 
 
     @extend %clearfix;
