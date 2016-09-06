@@ -2,18 +2,24 @@
 
   <div class="wrapper">
 
-
+    <div class="header-links">
       <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <div class="space-nav"></div>
+      <nav class="site-nav">
+          {% assign sorted_pages = site.pages | sort:"order" %}
 
-    <nav class="site-nav">
-        {% assign sorted_pages = site.pages | sort:"order" %}
+          {% for my_page in sorted_pages %}
+            {% if my_page.title %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endif %}
+          {% endfor %}
 
-        {% for my_page in sorted_pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-    </nav>
+
+      </nav>
+      <img class="menu-icon" src="/img/MenuIcon4.png">
+
+
+    </div>
 
   </div>
 

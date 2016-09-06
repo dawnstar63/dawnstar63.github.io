@@ -13,6 +13,7 @@
 
     .wrapper {
         background-color: rgba(255,255,255,0.7);
+        position: relative;
 
     }
 
@@ -25,11 +26,22 @@
     
 }
 
+.space-nav {
+    display: inline;
+    width: 100%;
+    height: inherit;
+}
+
+
+.header-links {
+}
+
 .site-title {
     font-size: $site-title-font-size;
     font-weight: 300;
     line-height: 2;
-    display: inline-block;
+    display: inline;
+    white-space: nowrap;
 
     &,
     &:visited {
@@ -37,33 +49,58 @@
     }
 }
 
-
+.menu-icon {
+    display: none;
+    @include media-query($on-palm) {
+        display: inline;
+        // display: inline-block;
+    }
+    max-width: none;
+    margin: auto;
+    width: 50px;
+    padding: 0px;
+    height: auto;
+    vertical-align: text-bottom;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+}
 
 
 .site-nav {
-    position: relative;
-    // float: left;
-    // margin-top: auto;
+
     display: inline;
+    position: relative;
+    // width: 100%;
+    text-align: right;
     line-height: $base-line-height;
     
-    .menu-icon {
+    -webkit-flex: auto; /* Safari 6.1+ */
+    -ms-flex: auto; /* IE 10 */ 
+    flex: auto;
+
+    @include media-query($on-palm) {
         display: none;
     }
+    margin-left: 50px;
+    width: 100%;
+
 
     .page-link {
-        margin-left: 50px;
+
         font-size: 20px;
         color: $text-color;
         display: inline;
+        margin: 0px 10px;
 
         border-bottom: 4px solid rgba(0,0,0,0);
-        padding: 20px 0;
+        padding: 20px 0px;
 
         &.current {
             text-decoration: none;
             border-bottom: 4px solid $grey-color;
-            padding: 6px 0; 
+            padding: 6px 0px;
             color: $grey-color;
         }
 
@@ -72,12 +109,8 @@
             transition: 0.3s ease;
             text-decoration: none;
             border-bottom: 4px solid $grey-color;
-            padding: 6px 0; 
+            padding: 6px 0px; 
             color: $grey-color;
-        }
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            // margin-right: 20px;
         }
     }
 
@@ -88,6 +121,36 @@
     
 }
 
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+        border-top: 1px solid #999;
+        padding: 10px 0px;
+    }
+
+}
+
+.table-date {
+}
+
+.table-location {
+    // white-space: nowrap;
+    width: 25%;
+    text-align: right;
+}
+
+.table-description {
+    width: 55%;
+    text-align: center;
+    padding: 10px 10px;
+
+}
 
 /**
  * Site footer
