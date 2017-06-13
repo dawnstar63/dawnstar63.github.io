@@ -12,9 +12,9 @@
     position: relative;
 
     .wrapper {
-        background-color: rgba(255,255,255,0.7);
         position: relative;
-
+        padding-top: $spacing-unit/2;
+        padding-bottom: $spacing-unit/2;
     }
 
     .site-title:hover {
@@ -34,12 +34,12 @@
 
 
 .header-links {
+
 }
 
 .site-title {
     font-size: $site-title-font-size;
     font-weight: 300;
-    line-height: 2;
     display: inline;
     white-space: nowrap;
 
@@ -48,25 +48,6 @@
         color: $grey-color-dark;
     }
 }
-
-.menu-icon {
-    display: none;
-    @include media-query($on-palm) {
-        display: inline;
-        // display: inline-block;
-    }
-    max-width: none;
-    margin: auto;
-    width: 50px;
-    padding: 0px;
-    height: auto;
-    vertical-align: text-bottom;
-    position: absolute;
-    right: 20px;
-    top: 0;
-    bottom: 0;
-}
-
 
 .site-nav {
 
@@ -80,9 +61,6 @@
     -ms-flex: auto; /* IE 10 */ 
     flex: auto;
 
-    @include media-query($on-palm) {
-        display: none;
-    }
     margin-left: 50px;
     width: 100%;
 
