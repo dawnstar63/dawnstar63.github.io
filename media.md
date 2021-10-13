@@ -1,10 +1,10 @@
----
+<!-- ---
 layout: page
 title: Media
 permalink: /media/
 order: 3
 ---
-
+ -->
 <!-- solo recital Debussy Sonata -->
 Debussy Cello Sonata
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL4ya39_0Kt8zRC60TXKNWZsjIks1WZlQJ" frameborder="0" allowfullscreen></iframe>
