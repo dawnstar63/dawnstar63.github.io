@@ -69,16 +69,17 @@
 
         font-size: 20px;
         color: $text-color;
-        display: inline;
         margin: 0px 10px;
+        transition: 0.3s ease;
 
+        border-box: box-sizing;
         border-bottom: 4px solid rgba(0,0,0,0);
-        padding: 20px 0px;
+        padding: 0px 0px 20px 0px; // top right bottom left
 
         &.current {
             text-decoration: none;
             border-bottom: 4px solid $grey-color;
-            padding: 6px 0px;
+            padding: 0px 0px 6px 0px;
             color: $grey-color;
         }
 
@@ -87,7 +88,7 @@
             transition: 0.3s ease;
             text-decoration: none;
             border-bottom: 4px solid $grey-color;
-            padding: 6px 0px; 
+            padding: 0px 0px 6px 0px;
             color: $grey-color;
         }
     }
